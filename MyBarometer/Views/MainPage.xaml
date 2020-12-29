@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyBarometer.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    xmlns:res="clr-namespace:MyBarometer.Resources">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Image Source="background.png" 
+                   AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize" />
+            <Image 
+                x:Name="arrowImage"
+                AbsoluteLayout.LayoutBounds="178, 65, 4, 230"
+                Source="minute_hand.png"
+                Rotation= "0"/>
+            <Image 
+                x:Name="arrowSaveImage"
+                AbsoluteLayout.LayoutBounds="179, 40, 2, 280"
+                Source="second_hand.png"
+                Rotation="0" />
+            <Image 
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds=".5, .5, 17, 17"
+                Source="nut.png" />
+            <Button
+                Text=""
+                BackgroundColor="Transparent"
+                CornerRadius="10"
+                AbsoluteLayout.LayoutBounds="150, 150, 60, 60"
+                Clicked="OnButtonClicked" />
+            <Label
+                x:Name="textLabel"
+                Text="760.0" FontSize="Large" 
+                AbsoluteLayout.LayoutBounds="140, 290, 80, 40" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
